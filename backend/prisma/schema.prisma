@@ -15,8 +15,25 @@ datasource db {
 
 
 model User {
-  id String @default(uuid())
+  id Int @id @default(autoincrement())
   email String
   username String @unique
   password String 
+  session Session[]
+  messages Message[]
+}
+
+model Session {
+  id Int @id @default(autoincrement())
+  userId Int @unique
+  expires_at DateTime
+  user User @relation(fields: [userId], references: [id])
+}
+
+model Message {
+  id Int @id @default(autoincrement())
+  userId Int @unique
+  text String
+  timeStamp DateTime @default(now())
+  user User @relation(fields: [userId], references: [id])
 }
