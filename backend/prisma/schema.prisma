@@ -24,8 +24,8 @@ model User {
 
 model Message {
   id          Int       @id @default(autoincrement())
-  userId      Int       @unique
+  username    String       
   text        String
-  timeStamp   DateTime  @default(now())
-  user        User      @relation(fields: [userId], references: [id])
+  timeStamp   String
+  user        User      @relation(fields: [username], references: [username])
 }
