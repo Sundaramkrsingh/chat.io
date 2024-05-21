@@ -14,6 +14,7 @@ npm install
 ```
 
 > Setup DB (for Windows use git-bash to run the script and ignore chmod cmd)
+> Ensure Docker daemon is in running state
 
 ```
 cd backend/
