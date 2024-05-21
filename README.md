@@ -4,12 +4,15 @@
 
 ```
 git clone https://github.com/Sundaramkrsingh/latracal-assignment.git
+cd latracal-assignment
 ```
 
 > Install the Dependencies
 
 ```
-cd latracal-assignment
+cd frontend/
+npm install
+cd ../backend
 npm install
 ```
 
