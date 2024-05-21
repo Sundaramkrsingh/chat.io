@@ -9,7 +9,7 @@ import cors from 'cors'
 
 const app = express()
 const port = 3000
-const SESSION_SECRET = process.env.SESSION_SECRET || ''
+const SESSION_SECRET = "sundaram-secret-app-key-12343"
 
 app.use(express.json())
 app.use(cookieParser())

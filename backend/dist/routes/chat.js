@@ -58,16 +58,6 @@ wss.on("connection", (ws, request) => {
     console.log(`New WebSocket connection from user: ${user === null || user === void 0 ? void 0 : user.username}`);
     ws.on("message", (message) => __awaiter(void 0, void 0, void 0, function* () {
         let receivedMessage = { username: "", text: "", timeStamp: "" };
-        // if (typeof message === 'string') {
-        //     receivedMessage = message
-        // } else if (message instanceof Blob) {
-        //     receivedMessage = await message.text()
-        // } else if (message instanceof Buffer) {
-        //     receivedMessage = message.toString('utf-8');
-        // } else {
-        //     console.error('Received unsupported message type:', message)
-        //     return
-        // }
         try {
             receivedMessage = JSON.parse(message);
         }
