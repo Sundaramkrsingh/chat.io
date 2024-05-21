@@ -22,6 +22,7 @@ export const fetchUserState = selector({
         } catch(err) {
             console.error('Error fetching user data:', err)
         }
+        
         return null
     }    
 })
